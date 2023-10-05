@@ -1,0 +1,5 @@
+show databases;
+use 171796_lab1_transactions;
+show tables;
+use 171796_lab2_triggers;
+show tables;
