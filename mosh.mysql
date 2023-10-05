@@ -14,6 +14,7 @@ use 171796_lab2_triggers;
 -- To list the tables in the database
 show tables;
 
+-- STEP 1
 show create table employees;
 -- create a duplicate table
 CREATE TABLE `employees_undo` (
