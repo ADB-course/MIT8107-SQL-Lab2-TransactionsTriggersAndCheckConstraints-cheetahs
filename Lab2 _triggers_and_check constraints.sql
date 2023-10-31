@@ -8,7 +8,7 @@ FOR EACH ROW
 BEGIN
 -- Check if the new credit limit exceeds 250,000
     IF (NEW.creditLimit > 250000) THEN
-    -- If the credit limit is higher than 25,000, raise a custom SQLSTATE error 
+    -- If the credit limit is higher than 250,000, raise a custom error message
         SIGNAL SQLSTATE '020000' SET MESSAGE_TEXT = 'Warning: Credit Limit cannot be greater than 250000!';
     END IF;
 END $$
@@ -24,4 +24,4 @@ VALUES
 
 -- In the above code, we create a trigger named TRG_CREDIT_LIMIT_VIOLATION 
 -- to check if a new customer's credit limit exceeds 250,000. 
--- If it does, the trigger raises a custom SQLSTATE error to prevent the insertion of the new record 
+-- If it does, the trigger raises a custom error message to prevent the insertion of the new record 
